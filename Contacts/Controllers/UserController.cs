@@ -22,21 +22,21 @@ namespace Contacts.Controllers
 
         }
 
-        // GET: api/<contactController>
+        // GET: /<contactController>
         [HttpGet]
         public List<Users> Get()
         {
             return contactRepos.GetAllConatct();
         }
 
-        // GET api/<contactController>/5
+        // GET /<contactController>/5234
         [HttpGet("{mobileNo}")]
         public Users Get(int mobileNo)
         {
             return contactRepos.GetContactByMobileNo(mobileNo);
         }
 
-        // POST api/<contactController>
+        // POST /<contactController>
         [HttpPost]
         public void Post([FromBody] Users users)
         {
