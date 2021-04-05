@@ -26,21 +26,21 @@ namespace Contacts.Controllers
         [HttpGet]
         public List<Users> Get()
         {
-            return contactRepos.getAllConatct();
+            return contactRepos.GetAllConatct();
         }
 
         // GET api/<contactController>/5
         [HttpGet("{mobileNo}")]
         public Users Get(int mobileNo)
         {
-            return contactRepos.getContact(mobileNo);
+            return contactRepos.GetContactByMobileNo(mobileNo);
         }
 
         // POST api/<contactController>
         [HttpPost]
         public void Post([FromBody] Users users)
         {
-            contactRepos.addContact(users);
+            contactRepos.AddContact(users);
         }
 
         // PUT api/<contactController>/5
